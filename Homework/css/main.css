@@ -1,0 +1,80 @@
+* {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.column {
+  width:30%;
+  height:400px;
+  display:inline-block;
+  vertical-align:top;
+  margin-left: 2%;
+  margin-top:20px;
+}
+
+.column:nth-child(1) {
+	margin-left: 15px;
+}
+
+.container {
+  display:block;
+  margin:0px auto;
+}
+
+.rotatebox {
+	width:30px;
+	height:30px;
+	border:2px solid #5ba3d6;
+	display:inline-block;
+	vertical-align:top;
+	float:right;
+	border-top: none;
+ 	border-right:none;
+}
+
+.tshirtbox {
+	width:100%;
+	height:270px;
+	border: 2px solid #5ba3d6;
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+}
+
+.iconbar {
+	width:100%;
+	height:60px;
+	display:inline-block;
+	vertical-align: bottom;
+	position:relative;
+}
+
+.icon {
+	width:20%;
+	height:100%;
+	display:inline-block;
+	vertical-align: top;
+	position:relative;
+	border-bottom:2px solid #5ba3d6;
+}
+.icon:nth-child(odd) {
+	border-right:2px solid #5ba3d6;
+	border-left:2px solid #5ba3d6;
+}
+
+.textbar {
+	width:100%;
+	height:53px;
+	border:5px solid yellow;
+	display:inline-block;
+	vertical-align: top;
+	position:relative;
+}
+
+@media screen and (max-width: 800px) {
+  
+	.column {
+    	width:100%;
+  }
+ }
