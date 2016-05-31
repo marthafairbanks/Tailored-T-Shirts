@@ -1,54 +1,53 @@
+/* sets the entire page to box sizing: border box */ 
 * {
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+/* sets three columns when page is view at full screen*/
 .column {
-  width:30%;
-  height:400px;
+  width:29%;
+  /*width: 204px;*/
   display:inline-block;
   vertical-align:top;
-  margin-left: 2%;
-  margin-top:20px;
+  margin-left: 3%;
+  margin-top:5%;
 }
 
-.column:nth-child(1) {
-	margin-left: 15px;
-}
-
+/* styles the div boxes creating the basic outline */
 .container {
   display:block;
   margin:0px auto;
+  width: 700px;
+  height: 280px;
+}
+
+.tshirtbox {
+	width:100%;
+	border: 2px solid #5ba3d6;
+	padding:0px;
 }
 
 .rotatebox {
-	width:30px;
-	height:30px;
+	width:20px;
+	height:20px;
 	border:2px solid #5ba3d6;
 	display:inline-block;
 	vertical-align:top;
 	float:right;
 	border-top: none;
  	border-right:none;
-}
-
-.tshirtbox {
-	width:100%;
-	height:270px;
-	border: 2px solid #5ba3d6;
-	display:inline-block;
-	vertical-align:top;
-	position:relative;
+ 	z-index: 100;
+ 	position: relative;
+ 	margin-top: -5px;
+ 	margin-right: 5px;
 }
 
 .iconbar {
 	width:100%;
-	height:60px;
-	display:inline-block;
-	vertical-align: bottom;
-	position:relative;
-}
+	height:35px;
+	}
 
 .icon {
 	width:20%;
@@ -58,6 +57,7 @@
 	position:relative;
 	border-bottom:2px solid #5ba3d6;
 }
+
 .icon:nth-child(odd) {
 	border-right:2px solid #5ba3d6;
 	border-left:2px solid #5ba3d6;
@@ -65,16 +65,310 @@
 
 .textbar {
 	width:100%;
-	height:53px;
-	border:5px solid yellow;
+	height:35px;
 	display:inline-block;
 	vertical-align: top;
 	position:relative;
 }
 
-@media screen and (max-width: 800px) {
+.item {
+	width:50%;
+	height:100%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.price {
+	text-align: right;
+	font-weight: bold;
+}
+
+/* styles the icons */
+.fa {	
+	padding-left: 13px;
+	vertical-align: top;
+	padding-bottom: 5px;
+}
+
+.fa-repeat {
+	color: #5ba3d6;
+	transform: rotateY(180deg) rotate(200deg);
+	font-size: 12px !important;
+	margin-left:-10px;
+}
+
+p {
+	font-size: 13px;
+	margin:10px 10px 10px 10px;
+	color: #5ba3d6;
+	font-family: 'Open Sans';
+	margin-left:0px;
+	margin-right: 0px;
+}
+
+.colorboxBlue {
+	width:17px;
+	height:17px;
+	border:2px solid white;
+	display:inline-block;
+	background-color: #81BCE6;
+	margin: -3px 0px 0px 12px;
+}
+
+.colorboxPink {
+	width:17px;
+	height:17px;
+	border:2px solid white;
+	display:inline-block;
+	background-color: #D482AA;
+	margin: -3px 0px 0px 12px;
+}
+
+.colorboxOrange {
+	width:17px;
+	height:17px;
+	border:2px solid white;
+	display:inline-block;
+	background-color: #DCB07D;
+	margin: -3px 0px 0px 12px;
+}
+
+.xl {
+	margin-top:9px;
+	margin-left: 12px;
+}
+
+.fa-stop {	
+	padding-left: 15px;
+	vertical-align: top;
+	font-size: 20px !important; 
+}
+
+.blue {
+	color:#5ba3d6 !important;
+}
+
+.pink {
+	color:#D482AA !important;
+}
+
+.green {
+	color:#569624 !important;
+}
+
+.orange {
+	color:#DCB07D !important;
+	padding-bottom: 0px !important;
+}
+
+/* styles the text for the item description and price */
+.textbar p{
+	font-size:14px;
+}
+
+/* styles the icons upon hover */
+.rotatebox:hover {
+	background-color: #5ba3d6;
+	color: white;
+}
+
+.rotatebox:hover i {
+	color: white;
+	cursor:pointer;	
+}
+
+.icon:hover {
+	background-color: #5ba3d6;
+	color: white;
+	cursor: pointer;
+}
+
+.icon:hover i {
+	color: white;
+	cursor: pointer;	
+}
+
+.icon:hover p {
+	color:white;
+	cursor:pointer;
+}
+
+.colorbox:hover {
+		background-color: #5ba3d6;
+		cursor: pointer;
+}
+
+/*styles the images */
+img {
+	width:90%;
+	display: inline-block;
+}
+
+img.dropsizecontent {
+	width:60%;
+	height:60%;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+img.imgxl {
+	margin-top: 10px;
+}
+
+/*makes the little bounce for the drop menus*/
+@-webkit-keyframes bounce {
+    0% {
+    -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }    
+
+    50% {
+    -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+    100% {
+    -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+@keyframes bounce {
+	0% {
+    -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }    
+
+    100% {
+    -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+/* styles the drop menu for the different sizes */
+.sizecontent {
+	display: none;
+	position: relative;
+	width: 50px;
+	background-color:white;
+	border: 2px solid #5ba3d6;
+	margin-left:-7px;
+	margin-top:-165px;
+	padding-bottom: 5px;
+}
+
+.arrowsize {
+	width:9px;
+	height:9px;
+	border-top: 2px solid #5ba3d6;
+	border-left: 2px solid #5ba3d6;
+	display:inline-block;
+	background-color: white;
+	position: absolute;
+	display: none;
+	transform: rotate(225deg);	
+	margin-top: 126px;
+	margin-left: 20px;
+}
+
+.three:hover .sizecontent {
+	display:block;
+	z-index: 100;
+    -webkit-animation: bounce 1s ease;
+        animation: bounce 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.three:hover .arrowsize	 {
+	display:block;
+	z-index: 101;
+}
+
+/* styles the drop menu for the different colors*/
+.colorcontent {
+	display: none;
+	position: relative;
+	width: 50px;
+	background-color: white;
+	border: 2px solid #5ba3d6;
+	margin-left:-5px; 
+	margin-top:-147px;
+}
+
+.arrowcolor {
+	width:9px;
+	height:9px;
+	border-top: 2px solid #5ba3d6;
+	border-left: 2px solid #5ba3d6;
+	display:inline-block;
+	background-color: white;
+	position: absolute;
+	display: none;
+	transform: rotate(225deg);	
+	margin-top: 97px;
+	margin-left: 20px;
+}
+.four:hover .colorcontent {
+	display:block;
+	z-index: 100;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    -webkit-animation: bounce 1s ease;
+        animation: bounce 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.four:hover .arrowcolor	 {
+	display:block;
+	z-index: 101;
+}
+
+/*flips the tshirt images when the rotate box is clicked */
+.flip-container {
+	perspective: 1000px;
+}
+
+.rotatebox:active + .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 200px;
+	height: 202px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 50;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+	margin-left:-7px;
+}
+
+/* attempts to keep the formatting intact when viewed on smaller screens woof */
+@media screen and (max-width: 500px) {
   
 	.column {
-    	width:100%;
+	  width: 50%;
   }
  }
